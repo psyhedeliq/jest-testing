@@ -3,16 +3,16 @@ import { CartWidget } from "./CartWidget"
 
 export const Header = () => (
   <header>
-    <div className="container">
-      <div className="nav-brand">
-        <Link to="/">
-          <h1>Goblin Store</h1>
+    <div className='container'>
+      <div className='nav-brand'>
+        <Link to='/'>
+          <h1>Heroes of Might and Magic Store</h1>
         </Link>
         <p>Everything for your Typescript adventure</p>
       </div>
-      <div className="cart">
+      <div className='cart'>
         <CartWidget />
       </div>
     </div>
   </header>
-)
+);

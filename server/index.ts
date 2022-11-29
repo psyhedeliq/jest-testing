@@ -50,5 +50,7 @@ app.get("/order/:orderId", (req, res) => {
 })
 
 app.listen(port, () =>
-  console.log(`Goblin store backend running on http://localhost:${port}!`)
-)
+  console.log(
+    `Heroes of Might and Magic store backend running on http://localhost:${port}!`
+  )
+);

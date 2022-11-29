@@ -13,7 +13,7 @@ describe('App', () => {
         <App />
       </Router>
     );
-    expect(container.innerHTML).toMatch('Goblin Store');
+    expect(container.innerHTML).toMatch('Heroes of Might and Magic Store');
   });
 
   it('renders Home component on root route', () => {
