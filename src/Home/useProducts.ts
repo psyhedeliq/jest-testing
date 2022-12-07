@@ -10,10 +10,10 @@ export const useProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await getProducts()
-        setCategories(data.categories || [])
-      } catch (error) {
-        setError(error)
+        const data = await getProducts();
+        setCategories(data.categories || []);
+      } catch (error: any) {
+        setError(error);
       }
       setIsLoading(false)
     }
