@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react"
-import { Product } from "../shared/types"
-import { getOrder } from "../utils/api"
+import { useState, useEffect } from 'react';
+import { Product } from '../shared/types';
+import { getOrder } from '../utils/api';
 
 export interface Order {
-  products: Product[]
+  products: Product[];
 }
 
 const getOrderId = () => {
-  const urlParams = new URLSearchParams(window.location.search)
-  return urlParams.get("orderId")
-}
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('orderId');
+};
 
 export const useOrder = () => {
-  const [order, setOrder] = useState<Order>()
-  const [isLoading, setIsLoading] = useState(true)
+  const [order, setOrder] = useState<Order>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const orderId = getOrderId()
+      const orderId = getOrderId();
       if (!orderId) {
-        return
+        return;
       }
-      const order = await getOrder(orderId)
+      const order = await getOrder(orderId);
       if (order.success) {
-        setOrder(order)
+        setOrder(order);
       }
-      setIsLoading(false)
-    }
-    fetchData()
-  }, [])
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
 
-  return { order, isLoading }
-}
+  return { order, isLoading };
+};

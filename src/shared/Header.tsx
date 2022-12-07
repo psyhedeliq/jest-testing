@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { CartWidget } from "./CartWidget"
+import { Link } from 'react-router-dom';
+import { CartWidget } from './CartWidget';
 
 export const Header = () => (
   <header>

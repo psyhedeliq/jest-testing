@@ -1,13 +1,12 @@
 interface FormError {
-  message: string
+  message: string;
 }
 
-interface FormFieldProps
-  extends React.HTMLProps<HTMLInputElement> {
-  label: string
-  inputRef?: React.Ref<HTMLInputElement>
-  errors?: FormError
-  normalize?: (value: string) => string
+interface FormFieldProps extends React.HTMLProps<HTMLInputElement> {
+  label: string;
+  inputRef?: React.Ref<HTMLInputElement>;
+  errors?: FormError;
+  normalize?: (value: string) => string;
 }
 
 export const FormField = ({
@@ -19,7 +18,7 @@ export const FormField = ({
   ...inputProps
 }: FormFieldProps) => {
   return (
-    <div className="nes-field">
+    <div className='nes-field'>
       <label id={`${name}-label`} htmlFor={name}>
         {label}:
       </label>
@@ -28,16 +27,12 @@ export const FormField = ({
         ref={inputRef}
         name={name}
         {...inputProps}
-        className={`nes-input ${errors && "is-error"}`}
-        onChange={(e) =>
-          (e.target.value = normalize(e.target.value))
-        }
+        className={`nes-input ${errors && 'is-error'}`}
+        onChange={(e) => (e.target.value = normalize(e.target.value))}
       />
       {errors && (
-        <p className="note nes-text is-error">
-          Error: {errors.message}
-        </p>
+        <p className='note nes-text is-error'>Error: {errors.message}</p>
       )}
     </div>
-  )
-}
+  );
+};

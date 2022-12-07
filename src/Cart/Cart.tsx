@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom"
-import { useCartContext } from "../CartContext"
-import { CartItem } from "./CartItem"
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../CartContext';
+import { CartItem } from './CartItem';
 
 export const Cart = () => {
-  const { products, removeFromCart, totalPrice } = useCartContext()
+  const { products, removeFromCart, totalPrice } = useCartContext();
   if (!products.length) {
     return (
       <>
-        Your cart is empty.{" "}
-        <Link to="/">Back to main page.</Link>
+        Your cart is empty. <Link to='/'>Back to main page.</Link>
       </>
-    )
+    );
   }
 
   return (
-    <section className="nes-container with-title is-centered">
-      <h3 className="title">Cart Summary</h3>
-      <div className="cart-items">
+    <section className='nes-container with-title is-centered'>
+      <h3 className='title'>Cart Summary</h3>
+      <div className='cart-items'>
         {products.map((datum) => (
           <CartItem
             key={datum.name}
@@ -27,12 +26,10 @@ export const Cart = () => {
         <p>Total: {totalPrice()} Zm</p>
       </div>
       <div>
-        <Link to="/checkout">
-          <button className="nes-btn is-primary">
-            Go to checkout
-          </button>
+        <Link to='/checkout'>
+          <button className='nes-btn is-primary'>Go to checkout</button>
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};

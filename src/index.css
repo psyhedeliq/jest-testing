@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Press Start 2P", sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,7 +15,7 @@ html {
   box-sizing: inherit;
 }
 
-@import "~nes.css/css/nes.css";
+@import '~nes.css/css/nes.css';
 
 #root > .container {
   max-width: 980px;
@@ -93,7 +93,7 @@ header.sticky .nav-brand p {
 }
 
 .cart-items {
-  display: block
+  display: block;
 }
 
 .cart-item {
