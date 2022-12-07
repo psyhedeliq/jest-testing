@@ -20,7 +20,7 @@ export const ProductCard = ({ datum }: ProductCardProps) => {
         alt='goblin'
       />
       <p>{datum.name}</p>
-      <p>{datum.price} Zm</p>
+      <p>{datum.price} BTC</p>
       {isInCart ? (
         <button disabled className='nes-btn is-disabled'>
           Added to cart

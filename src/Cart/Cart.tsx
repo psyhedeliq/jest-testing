@@ -23,7 +23,7 @@ export const Cart = () => {
             removeFromCart={removeFromCart}
           />
         ))}
-        <p>Total: {totalPrice()} Zm</p>
+        <p>Total: {totalPrice()} BTC</p>
       </div>
       <div>
         <Link to='/checkout'>

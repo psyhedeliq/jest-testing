@@ -16,7 +16,7 @@ export const CartItem = ({ product, removeFromCart }: CartItemProps) => {
         alt={product.name}
       />
       <p>{product.name}</p>
-      <p>{product.price} Zm</p>
+      <p>{product.price} BTC</p>
       <button
         onClick={() => {
           removeFromCart(product);
