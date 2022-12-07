@@ -39,7 +39,7 @@ header > .container {
   display: flex;
   align-items: baseline;
   max-width: 980px;
-  margin: 0 auto;
+  margin: -15px auto;
   padding-top: 1rem;
   transition: all 0.2s ease;
 }
