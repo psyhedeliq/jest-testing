@@ -20,7 +20,7 @@ html {
 #root > .container {
   max-width: 980px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 185px;
   margin-bottom: 100px;
 }
 
@@ -46,6 +46,7 @@ header > .container {
 
 header > .container > .nav-brand {
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 header > .container > .social-button {
   margin-left: auto;
